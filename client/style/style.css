@@ -336,6 +336,17 @@ button.submit {
     outline: none;
 }
 
+button.reset {
+    position: absolute;
+    left: 0px;
+    border: none;
+    background: #C5EEA9;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
 button.submit:hover {
     background: #3AE334;
 };
