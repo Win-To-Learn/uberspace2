@@ -83,7 +83,7 @@ exports.Model = function(interval) {
 // Server ----------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 function Server(options, model) {
-    this.maxChars = options.maxChars || 128;
+    this.maxChars = options.maxChars || 512;
     this.maxClients = options.maxClients || 64;
     this.port = options.port || 7604;
     this.showStatus = options.status === false ? false : true;
@@ -140,6 +140,7 @@ function Server(options, model) {
                 } else if (conn.$clientID) {
                     that.clients[conn.$clientID].send(MSG_GAME_PING, []);
                     that.clients[conn.$clientID].onMessage(msg);
+					that.log(msg);
                 }
 
             } catch (e) {

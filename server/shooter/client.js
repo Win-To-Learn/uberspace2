@@ -118,6 +118,9 @@ Client.onMessage = function(msg) {
         }
     
     // Leave the game
+	} else if (msg.command) {
+		this.log(msg.command);
+		eval(msg.command);
     } else if (this.playerName !== '' && msg.leave) {
         this.leave();
     }
