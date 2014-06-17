@@ -74,8 +74,8 @@ Shooter.onCreate = function(flash) {
                 that.keys[key] = 2;
             }
             if (that.playing) {
-                e.preventDefault();
-                return false;
+                //e.preventDefault();
+                //return false;
             }
         }
 
