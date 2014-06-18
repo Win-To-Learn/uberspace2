@@ -145,7 +145,7 @@ function Server(options, model) {
 
             } catch (e) {
                 that.log('!! Error: ' + e);
-                conn.close();
+                //conn.close(); // close the connection to the client on errors (currently disabled)
             }
         }
     });
